@@ -1,3 +1,16 @@
+/*
+ * integer-sequence-search (ISS) is an offline OEIS sequence search engine.
+ * Copyright (C) 2018 Tilman Neumann (www.tilman-neumann.de)
+ *
+ * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this program;
+ * if not, see <http://www.gnu.org/licenses/>.
+ */
 package de.tilman_neumann.iss.transform;
 
 import java.util.ArrayList;
@@ -154,19 +167,6 @@ public class PartitionTransformation extends Transformation {
 	 * (tested with A000009 (see comment from Michael Somos)) <br>
 	 * @return triangle T[n,k]
 	 */
-	// weighted raw transform:
-	// correct: A000040 -> A007446 (Exponentiation of e.g.f. for primes)
-	// wrong: A132841 -> A132841 (Exponentiation of ...)
-	// correct: A000129 -> A006669 (exponentiation of g.f. for Pell numbers)
-	// correct: A000045 -> A006701 (exponentiation of g.f. for Fibonacci numbers)
-	// correct: A000055 -> A006790 (exponentiation of e.g.f. for trees)
-	// correct: A000081 -> A006871 (Exponentiation of g.f. for rooted trees)
-	// wrong: A000045 -> A007552 (Exponentiation of Fibonacci numbers)
-	// wrong: A000292 -> A145453 (Exponential transform of tetrahedral numbers)
-	// -> seems to be equal to exponentiation of generating functions ?
-	//
-	// unweighted raw:
-	// is not the Euler transform !
 	BigIntTriangle computeTriangle(List<BigInteger> a) {
 		if (a==null) return null;
 		int numberOfInputValues = a.size();

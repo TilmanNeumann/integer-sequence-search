@@ -1,3 +1,16 @@
+/*
+ * integer-sequence-search (ISS) is an offline OEIS sequence search engine.
+ * Copyright (C) 2018 Tilman Neumann (www.tilman-neumann.de)
+ *
+ * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this program;
+ * if not, see <http://www.gnu.org/licenses/>.
+ */
 package de.tilman_neumann.iss.sequence;
 
 import java.io.Serializable;
@@ -12,7 +25,6 @@ import de.tilman_neumann.util.SortedMultiset;
 /**
  * Interface for and partial implementation of OEIS sequences.
  * @author Tilman Neumann
- * @since 2008-12-31
  */
 public class OEISSequence implements Serializable {
 
