@@ -4,8 +4,8 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.tilman_neumann.types.SortedMultiset;
-import de.tilman_neumann.types.SortedMultiset_BottomUp;
+import de.tilman_neumann.util.SortedMultiset;
+import de.tilman_neumann.util.SortedMultiset_BottomUp;
 
 /**
  * An integer sequence, implemented as a list of BigIntegers.

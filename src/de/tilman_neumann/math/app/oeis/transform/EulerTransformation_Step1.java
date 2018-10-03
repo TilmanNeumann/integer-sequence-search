@@ -4,9 +4,10 @@ import java.util.List;
 import java.util.SortedSet;
 
 import org.apache.log4j.Logger;
-import java.math.BigInteger;
 
-import de.tilman_neumann.math.base.bigint.Divisors;
+import de.tilman_neumann.jml.Divisors;
+
+import java.math.BigInteger;
 
 /**
  * Computation of the first part of the Euler transform of the given integer sequence.

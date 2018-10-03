@@ -16,7 +16,7 @@ import de.tilman_neumann.math.app.oeis.sequenceMatch.SequenceMatchLinear;
 import de.tilman_neumann.math.app.oeis.sequenceMatch.SequenceMatchMatrix;
 import de.tilman_neumann.math.app.oeis.sequenceMatch.SequenceMatchMatrix2;
 import de.tilman_neumann.math.app.oeis.sequenceMatch.UniqueMatchPointIterator;
-import de.tilman_neumann.types.SortedMultiset;
+import de.tilman_neumann.util.SortedMultiset;
 
 /**
  * A comparator for sequences, finding linear match patterns like a[i]=b[2i].

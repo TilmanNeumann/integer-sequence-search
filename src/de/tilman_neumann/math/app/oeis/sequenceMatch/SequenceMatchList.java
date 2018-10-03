@@ -1,7 +1,7 @@
 package de.tilman_neumann.math.app.oeis.sequenceMatch;
 
-import de.tilman_neumann.types.SortOrder;
-import de.tilman_neumann.types.SortedList;
+import de.tilman_neumann.util.SortOrder;
+import de.tilman_neumann.util.SortedList;
 
 /**
  * List of matches of one lookup with nicer toString() implementation than

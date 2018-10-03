@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import de.tilman_neumann.math.base.bigint.combinatorics.Stirling;
+import de.tilman_neumann.jml.combinatorics.Stirling;
 
 import java.math.BigInteger;
 

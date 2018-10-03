@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 import org.apache.log4j.Logger;
 import java.math.BigInteger;
 
-import de.tilman_neumann.math.base.bigint.BigIntTriangle;
+import de.tilman_neumann.jml.base.BigIntTriangle;
 import de.tilman_neumann.util.ConfigUtil;
 
 /**

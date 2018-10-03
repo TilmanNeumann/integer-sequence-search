@@ -7,12 +7,12 @@ import java.util.SortedSet;
 import org.apache.log4j.Logger;
 import java.math.BigInteger;
 
+import de.tilman_neumann.jml.Divisors;
+import de.tilman_neumann.jml.MoebiusFunction;
 import de.tilman_neumann.math.app.oeis.sequence.OEISSequence;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_BigIntListImpl;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_UnsignedIndexListImpl;
-import de.tilman_neumann.math.base.bigint.Divisors;
-import de.tilman_neumann.math.base.bigint.Moebius;
 
 /**
  * Computation of the inverse Euler transform of the given integer sequence.
@@ -103,7 +103,7 @@ public class EulerTransformation_Inverse extends Transformation {
 		//String b_n_str = "";
 		for (BigInteger d : divisors) {
 			BigInteger moebiusArg = nBig.divide(d);
-			BigInteger moebiusVal = BigInteger.valueOf(Moebius.moebius(moebiusArg));
+			BigInteger moebiusVal = BigInteger.valueOf(MoebiusFunction.moebius(moebiusArg));
 			//LOG.debug("moebius(" + moebiusArg + ") = " + moebiusVal);
 			BigInteger elem = moebiusVal.multiply(c.get(d.intValue()-1));
 			b_n = b_n.add(elem);

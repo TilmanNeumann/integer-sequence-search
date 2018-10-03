@@ -6,7 +6,7 @@ import java.util.SortedSet;
 
 import org.apache.log4j.Logger;
 
-import de.tilman_neumann.math.base.bigint.Divisors;
+import de.tilman_neumann.jml.Divisors;
 
 /**
  * Sloane's inverse Moebius transform.

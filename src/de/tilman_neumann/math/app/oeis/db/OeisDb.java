@@ -13,9 +13,9 @@ import org.apache.log4j.Logger;
 import de.tilman_neumann.db.Db;
 import de.tilman_neumann.db.Dbms;
 import de.tilman_neumann.db.meta.DbMeta;
+import de.tilman_neumann.jml.base.BigIntList;
 import de.tilman_neumann.math.app.oeis.sequence.OEISSequence;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_UnsignedIndexListImpl;
-import de.tilman_neumann.math.base.bigint.BigIntList;
 import de.tilman_neumann.util.ConfigUtil;
 
 public class OeisDb extends Db {

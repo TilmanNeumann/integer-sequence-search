@@ -3,11 +3,11 @@ package de.tilman_neumann.math.app.oeis.transform;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.tilman_neumann.jml.base.BigIntConstants;
 import de.tilman_neumann.math.app.oeis.sequence.OEISSequence;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_BigIntListImpl;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_UnsignedIndexListImpl;
-import de.tilman_neumann.math.base.bigint.BigIntConstants;
 
 import java.math.BigInteger;
 

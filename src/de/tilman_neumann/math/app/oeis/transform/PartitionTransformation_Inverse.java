@@ -8,15 +8,15 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 import java.math.BigInteger;
 
+import de.tilman_neumann.jml.base.BigIntConstants;
+import de.tilman_neumann.jml.base.BigIntTriangle;
+import de.tilman_neumann.jml.combinatorics.Factorial;
+import de.tilman_neumann.jml.partitions.IntegerPartition;
+import de.tilman_neumann.jml.partitions.IntegerPartitionGenerator;
 import de.tilman_neumann.math.app.oeis.sequence.OEISSequence;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_BigIntListImpl;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_UnsignedIndexListImpl;
-import de.tilman_neumann.math.base.bigint.BigIntConstants;
-import de.tilman_neumann.math.base.bigint.BigIntTriangle;
-import de.tilman_neumann.math.base.bigint.combinatorics.Factorial;
-import de.tilman_neumann.math.partitions.IntegerPartition;
-import de.tilman_neumann.math.partitions.IntegerPartitionGenerator;
 
 /**
  * Implementation of inverse partition transforms.

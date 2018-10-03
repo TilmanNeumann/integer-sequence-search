@@ -6,11 +6,11 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import java.math.BigInteger;
 
+import de.tilman_neumann.jml.combinatorics.Binomial;
 import de.tilman_neumann.math.app.oeis.sequence.OEISSequence;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_BigIntListImpl;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_UnsignedIndexListImpl;
-import de.tilman_neumann.math.base.bigint.combinatorics.Binomial;
 
 /**
  * Computes the (forward) binomial transform according to Sloane, which is the

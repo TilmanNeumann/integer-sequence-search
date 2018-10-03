@@ -1,6 +1,6 @@
 package de.tilman_neumann.math.app.oeis.sequenceMatch;
 
-import de.tilman_neumann.types.Pair;
+import de.tilman_neumann.util.Pair;
 
 /**
  * A match of one value each of two sequences,

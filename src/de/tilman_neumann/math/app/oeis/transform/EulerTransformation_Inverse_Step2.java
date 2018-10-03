@@ -4,10 +4,11 @@ import java.util.List;
 import java.util.SortedSet;
 
 import org.apache.log4j.Logger;
-import java.math.BigInteger;
 
-import de.tilman_neumann.math.base.bigint.Divisors;
-import de.tilman_neumann.math.base.bigint.Moebius;
+import de.tilman_neumann.jml.Divisors;
+import de.tilman_neumann.jml.MoebiusFunction;
+
+import java.math.BigInteger;
 
 /**
  * Computation of the second part of the inverse Euler transform of the given integer sequence.
@@ -35,7 +36,7 @@ public class EulerTransformation_Inverse_Step2 extends Transformation_SimpleImpl
 		BigInteger b_n = BigInteger.ZERO;
 		for (BigInteger d : divisors) {
 			BigInteger moebiusArg = nBig.divide(d);
-			BigInteger moebiusVal = BigInteger.valueOf(Moebius.moebius(moebiusArg));
+			BigInteger moebiusVal = BigInteger.valueOf(MoebiusFunction.moebius(moebiusArg));
 			//LOG.debug("moebius(" + moebiusArg + ") = " + moebiusVal);
 			BigInteger elem = moebiusVal.multiply(a.get(d.intValue()-1));
 			b_n = b_n.add(elem);

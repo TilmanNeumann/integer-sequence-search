@@ -5,9 +5,9 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import java.math.BigInteger;
 
+import de.tilman_neumann.jml.base.BigIntList;
 import de.tilman_neumann.math.app.oeis.sequence.OEISSequence;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_BigIntListImpl;
-import de.tilman_neumann.math.base.bigint.BigIntList;
 import de.tilman_neumann.test.junit.ClassTest;
 
 /**

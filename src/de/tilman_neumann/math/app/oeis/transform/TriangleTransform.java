@@ -1,8 +1,8 @@
 package de.tilman_neumann.math.app.oeis.transform;
 
+import de.tilman_neumann.jml.base.BigIntTriangle;
 import de.tilman_neumann.math.app.oeis.sequence.OEISSequence;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues;
-import de.tilman_neumann.math.base.bigint.BigIntTriangle;
 
 public class TriangleTransform extends Transform {
 

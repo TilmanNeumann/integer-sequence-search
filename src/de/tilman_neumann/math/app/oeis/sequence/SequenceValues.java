@@ -5,7 +5,7 @@ import java.math.BigInteger;
 import java.util.Iterator;
 import java.util.List;
 
-import de.tilman_neumann.types.SortedMultiset;
+import de.tilman_neumann.util.SortedMultiset;
 
 /**
  * Interface for and partial implementation of integer sequences.

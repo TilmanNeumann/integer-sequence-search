@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import de.tilman_neumann.math.app.oeis.sequence.OEISSequence;
 import de.tilman_neumann.math.app.oeis.sequenceComparison.SequenceMatchCondition;
 import de.tilman_neumann.math.app.oeis.sequenceMatch.SequenceMatchLinear;
-import de.tilman_neumann.types.SortedMultiset;
+import de.tilman_neumann.util.SortedMultiset;
 
 /**
  * A comparator for sequences.

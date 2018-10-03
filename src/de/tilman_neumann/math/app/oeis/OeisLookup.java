@@ -9,12 +9,12 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import de.tilman_neumann.jml.base.BigIntList;
 import de.tilman_neumann.math.app.oeis.main.OeisLookupEngine;
 import de.tilman_neumann.math.app.oeis.main.OeisLookupEngineInMemory;
 import de.tilman_neumann.math.app.oeis.main.OeisLookupMode;
 import de.tilman_neumann.math.app.oeis.sequence.OEISSequence;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_BigIntListImpl;
-import de.tilman_neumann.math.base.bigint.BigIntList;
 import de.tilman_neumann.util.ConfigUtil;
 
 /**

@@ -9,13 +9,13 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;
 import org.apache.log4j.Logger;
 
+import de.tilman_neumann.jml.base.BigIntList;
 import de.tilman_neumann.math.app.oeis.sequence.OEISSequence;
 import de.tilman_neumann.math.app.oeis.sequence.SequenceValues_UnsignedIndexListImpl;
 import de.tilman_neumann.math.app.oeis.sequence.ValuesStore;
 import de.tilman_neumann.math.app.oeis.sequenceMatch.SequenceMatch;
 import de.tilman_neumann.math.app.oeis.sequenceMatch.SequenceMatchLinear;
 import de.tilman_neumann.math.app.oeis.sequenceMatch.SequenceMatchList;
-import de.tilman_neumann.math.base.bigint.BigIntList;
 import de.tilman_neumann.util.TimeUtil;
 
 public class OeisLookupEngineInMemory extends OeisLookupEngine {

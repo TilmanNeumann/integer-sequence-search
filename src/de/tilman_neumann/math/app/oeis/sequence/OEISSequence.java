@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import de.tilman_neumann.types.SortedMultiset;
+import de.tilman_neumann.util.SortedMultiset;
 
 /**
  * Interface for and partial implementation of OEIS sequences.
