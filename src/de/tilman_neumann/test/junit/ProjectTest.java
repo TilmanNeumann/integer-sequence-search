@@ -28,7 +28,7 @@ public class ProjectTest extends TestSuite {
 		// create project test suite
     	LOG.info("Start Project JUnit tests...");
 		TestSuite suite = new TestSuite("Project JUnit tests");
-        suite.addTest(de.tilman_neumann.math.app.oeis.transform.PackageTests.suite());
+        suite.addTest(de.tilman_neumann.iss.transform.PackageTests.suite());
         // XXX: Add more packages here
         
 		return suite;
