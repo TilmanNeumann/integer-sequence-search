@@ -26,7 +26,7 @@ import de.tilman_neumann.util.TimeUtil;
 abstract public class OeisLookupEngine {
 	private static final Logger LOG = Logger.getLogger(OeisLookupEngine.class);
 	
-	private static final String STRIPPED_TXT_FILE = "stripped_2017-02-11.txt";
+	private static final String STRIPPED_TXT_FILE = "stripped.txt";
 	
 	/**
 	 * Initialization of search engine.
@@ -41,7 +41,7 @@ abstract public class OeisLookupEngine {
     	long heapFreeSize = Runtime.getRuntime().freeMemory();
     	//LOG.debug("heapSize=" + heapSize + ",heapMaxSize=" + heapMaxSize + ",heapFreeSize=" + heapFreeSize);
 
-    	String oeisDataFileName = ConfigUtil.PROJECT_ROOT + ConfigUtil.FILE_SEPARATOR + "data" + ConfigUtil.FILE_SEPARATOR + "OeisResources" + ConfigUtil.FILE_SEPARATOR + STRIPPED_TXT_FILE;
+    	String oeisDataFileName = ConfigUtil.PROJECT_ROOT + ConfigUtil.FILE_SEPARATOR + "data" + ConfigUtil.FILE_SEPARATOR + STRIPPED_TXT_FILE;
     	long initStart = System.currentTimeMillis();
 		this.loadData(oeisDataFileName);
 		long initEnd = System.currentTimeMillis();
