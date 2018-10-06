@@ -20,7 +20,7 @@ You will need Java 8 or higher for the project to compile.
 This project comes with a sample OEIS data file (data/stripped.txt). You may replace it with the latest data file from http://oeis.org/pages.html. Please take note of the OEIS license, see http://oeis.org/LICENSE.
 
 There is no documentation and no support, so you should be ready to start exploring the source code.
-The main class where you start a search is class IntegerSequenceSearch.
+The main class where you start a search is de.tilman_neumann.iss.IntegerSequenceSearch.
 
 
 ## Remarks
