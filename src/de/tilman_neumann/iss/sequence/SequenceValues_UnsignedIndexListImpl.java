@@ -30,6 +30,7 @@ public class SequenceValues_UnsignedIndexListImpl extends SequenceValues {
 
 	private static final long serialVersionUID = 7488775714926601721L;
 
+	@SuppressWarnings("unused")
 	private static final Logger LOG = Logger.getLogger(SequenceValues_UnsignedIndexListImpl.class);
 	
 	private int[] unsignedValueIndices; // faster then List<Integer>, but higher memory requirements because unsignedValueIndexMultiset still needs Integer

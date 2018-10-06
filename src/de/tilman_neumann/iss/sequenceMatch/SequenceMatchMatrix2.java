@@ -27,6 +27,7 @@ import de.tilman_neumann.iss.sequence.OEISSequence;
  */
 public class SequenceMatchMatrix2 extends SequenceMatchMatrix {
 
+	@SuppressWarnings("unused")
 	private static final Logger LOG = Logger.getLogger(SequenceMatchMatrix2.class);
 	
 	private static final long serialVersionUID = 6177298374247406064L;

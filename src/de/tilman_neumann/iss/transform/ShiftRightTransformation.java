@@ -16,8 +16,6 @@ package de.tilman_neumann.iss.transform;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
-
 import de.tilman_neumann.iss.sequence.OEISSequence;
 import de.tilman_neumann.iss.sequence.SequenceValues;
 import de.tilman_neumann.iss.sequence.SequenceValues_BigIntListImpl;
@@ -32,8 +30,6 @@ import java.math.BigInteger;
  * @author Tilman Neumann
  */
 public class ShiftRightTransformation extends Transformation {
-	
-	private static final Logger LOG = Logger.getLogger(ShiftRightTransformation.class);
 
 	private int[] sElems;
 	private String name;

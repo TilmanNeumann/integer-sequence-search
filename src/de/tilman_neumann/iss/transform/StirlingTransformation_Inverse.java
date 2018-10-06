@@ -28,6 +28,7 @@ import java.math.BigInteger;
  * @author Tilman Neumann
  */
 public class StirlingTransformation_Inverse extends Transformation_SimpleImpl {
+	@SuppressWarnings("unused")
 	private static final Logger LOG = Logger.getLogger(StirlingTransformation_Inverse.class);
 
 	public String getName() {

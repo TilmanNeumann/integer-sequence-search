@@ -28,6 +28,7 @@ import de.tilman_neumann.iss.sequenceMatch.SequenceMatchMatrix;
  */
 public class SequenceMatchHypothesisLinear implements SequenceMatchHypothesis {
 	
+	@SuppressWarnings("unused")
 	private static final Logger LOG = Logger.getLogger(SequenceMatchHypothesisLinear.class);
 
 	private double a;
