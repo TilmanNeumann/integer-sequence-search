@@ -31,6 +31,7 @@ There is no further documentation or support to ISS, so you should be ready to s
 * This program is far from finished, but it is stable and can already provide interesting information.
 * Logging is still in a kind of debug mode (very verbose)
 * Some sequences get many trivial hits; it would need some filters to improve the view on interesting matches.
+* I'ld be happy about anybody contributing new transformations or documenting some transformations.
 
 
 ## Authors
