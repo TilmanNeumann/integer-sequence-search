@@ -107,9 +107,9 @@ import de.tilman_neumann.util.ConfigUtil;
 //...
 //
 // TODO: read configuration parameters from file
-public class OeisLookup {
+public class IntegerSequenceSearch {
 
-	private static final Logger LOG = Logger.getLogger(OeisLookup.class);
+	private static final Logger LOG = Logger.getLogger(IntegerSequenceSearch.class);
 	
 	/**
 	 * OEIS search application.
