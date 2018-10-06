@@ -46,7 +46,7 @@ public class SequenceStore implements Iterable<OEISSequence>, Serializable {
 	// map for fast lookup from names; with sub-optimal iteration speed.
 	private Map<String, OEISSequence> name2seq;
 	// used to synchronize add()
-	protected final Boolean syncObject = new Boolean(true);
+	protected static Object syncObject = new Object();
 	// -------------------------------------------------------------------
 
 	protected boolean verbose = false;

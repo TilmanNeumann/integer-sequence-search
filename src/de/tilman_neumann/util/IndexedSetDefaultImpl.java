@@ -30,7 +30,7 @@ import java.util.Map;
 public class IndexedSetDefaultImpl<T> implements IndexedSet<T> {
 
 	/** Used to synchronize addValue(). */
-	private final Boolean syncObject = new Boolean(true);
+	private static Object syncObject = new Object();
 	
 	private Map<T, Integer> values2Indices = null;
 	private ArrayList<T> values = null;
