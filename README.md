@@ -1,33 +1,36 @@
 # integer-sequence-search
 
 This project is an offline integer sequence search engine. Lets call it ISS for short ;-)
-ISS works on OEIS data files and is capable to discover sequence relations not documented in the OEIS yet.
-All you have to do is to type in a comma-separated number sequence or an OEIS A-number.
-Then see...
+ISS works on OEIS data files, so please take note of the OEIS license, see http://oeis.org/LICENSE.
+ISS comes with its own set of transforms and is capable to discover sequence relations not documented in the OEIS yet.
 
 
 ## Releases
 
-* v0.3 First revision with README file.
+* v0.3 First revision with a meaningful README file.
 
 
 ## Getting Started
 
-Clone the repository, create a plain Java project importing it, make sure that 'src' is the source folder of your project, and add the jars from the lib-folder to your classpath. 
+* Clone the repository, create a plain Java project importing it, make sure that 'src' is the source folder of your project, and add the jars from the lib-folder to your classpath. 
 
-You will need Java 8 or higher for the project to compile.
+* You will need Java 8 or higher for the project to compile.
 
-This project comes with a sample OEIS data file (data/stripped.txt). You may replace it with the latest data file from http://oeis.org/pages.html. Please take note of the OEIS license, see http://oeis.org/LICENSE.
+* Download some OEIS data file (stripped.zip) from http://oeis.org/pages.html; unpack it and name the unpacked version stripped.txt.
+Put that file into the main folder of your new Java project. Also, please take note of the OEIS license, see http://oeis.org/LICENSE.
 
-There is no documentation and no support, so you should be ready to start exploring the source code.
-The main class where you start a search is de.tilman_neumann.iss.IntegerSequenceSearch.
+* Now all you have to do is to start the main class de.tilman_neumann.iss.IntegerSequenceSearch and then type in some
+OEIS A-number or your own comma-separated integer sequence. If you are lucky, you'll be rewarded with some sequence relations
+that have not been documented before.
+
+There is no further documentation or support to ISS, so you should be ready to start exploring the source code.
 
 
 ## Remarks
 
 * This program is far from finished, but it is stable and can already provide interesting information.
 * Logging is still in a kind of debug mode (very verbose)
-* Some sequences get many stupid hits; it would need some filters to improve the view on interesting matches.
+* Some sequences get many trivial hits; it would need some filters to improve the view on interesting matches.
 
 
 ## Authors
