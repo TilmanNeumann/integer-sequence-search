@@ -46,5 +46,5 @@ This project is licensed under the GPL 3 License - see the [LICENSE](LICENSE) fi
 
 ## Credits
 
-So far all my credits go to the great OEIS project (http://oeis.org).
-Please respect its license, see http://oeis.org/LICENSE.
+The Online Encyclopedia of Integer Sequences (http://oeis.org).
+
