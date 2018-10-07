@@ -2,4 +2,4 @@
 .classpath
 .project
 log.txt
-stripped.txt
+stripped*
