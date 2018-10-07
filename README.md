@@ -19,8 +19,13 @@ ISS comes with its own set of transforms and is capable to discover sequence rel
 * Download some OEIS data file (stripped.zip) from http://oeis.org/pages.html; unpack it and name the unpacked version stripped.txt.
 Put that file into the main folder of your new Java project. Also, please take note of the OEIS license, see http://oeis.org/LICENSE.
 
-* Now all you have to do is to start the main class de.tilman_neumann.iss.IntegerSequenceSearch and then type in some
-OEIS A-number or your own comma-separated integer sequence. If you are lucky, you'll be rewarded with some sequence relations
+* Now all you have to do is to run the main class de.tilman_neumann.iss.IntegerSequenceSearch, wait until the data file is loaded,
+and then type in some OEIS A-number or your own comma-separated integer sequence.
+
+* To analyze results, it is recommended to look into the log.txt file generated in the main folder of the project.
+At the end of the file the best matches are listed, sorted by match sequence length. 
+Searching backward in the logs for the A-numbers, you'll find the sequence transforms
+and match matrices. If you are lucky, you'll be rewarded with one or more hypotheses on sequence relations
 that have not been documented before.
 
 There is no further documentation or support to ISS, so you should be ready to start exploring the source code.
