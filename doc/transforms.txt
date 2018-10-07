@@ -1,0 +1,98 @@
+A brief description of the sequence transforms used by this program
+-------------------------------------------------------------------
+
+1. Simple transforms
+
+"id" The identity transform.
+
+"abs" transforms take the absolute value of all input sequence values.
+
+"negate" Computes the sequence containing all negated entries of the input sequence.
+
+"negateEven" Transform that negates each second element, starting at offset 0.
+
+"negateOdd" Transform that negates each second element, starting at offset 1.
+
+"norm" Divides all elements of the given sequence by the first value, so that the result sequence is normalized to a first value of 1.
+
+"shiftLeftx" transforms mean that the first x sequence elements are dropped.
+
+"shiftRight*" transforms mean that * is/are inserted at the start of the input sequence.
+
+
+
+2. Convolution transforms
+
+"conv" the standard convolution transform with 1 as convolution multiplier
+
+"expConv" exponential convolution transform with binomial(n, k) as convolution multiplier
+
+"gcdConv" gcd convolution transform
+
+"lcmConv" lcm convolution transform
+
+"s1Conv" convolution transform with Stirling1(n, k) as convolution multiplier
+"s2Conv" convolution transform with Stirling2(n, k) as convolution multiplier
+"as1Conv" convolution transform with |Stirling1(n, k)| as convolution multiplier
+
+"s1s1Conv" convolution transform with Stirling1(n, k)*Stirling1(n, n-k) as convolution multiplier
+"s2s2Conv" convolution transform with Stirling2(n, k)*Stirling2(n, n-k) as convolution multiplier
+"s1s2Conv" convolution transform with Stirling1(n, k)*Stirling2(n, n-k) as convolution multiplier
+"s2s1Conv" convolution transform with Stirling2(n, k)*Stirling1(n, n-k) as convolution multiplier
+"as1as1Conv" convolution transform with |Stirling1(n, k)|*|Stirling1(n, n-k)| as convolution multiplier
+"as1s2Conv" convolution transform with |Stirling1(n, k)|*Stirling2(n, n-k) as convolution multiplier
+"s2as1Conv" convolution transform with |Stirling2(n, k)|*Stirling1(n, n-k) as convolution multiplier
+
+	The last 7 transforms are experimental and probably not very useful.
+	
+	
+
+3. Other important transforms
+ 
+"selfInvBinomial" Computation of the _self-inverse_ binomial transform (first definition given by the Wikipedia link),
+see http://mathworld.wolfram.com/BinomialTransform.html and http://en.wikipedia.org/wiki/Binomial_transform
+
+"binomial" Computes the (forward) binomial transform according to Sloane, which is the 
+inverse binomial transform in the terminology of Wolfram MathWorld.
+
+"invBinomial" computes the inverse binomial transform according to Sloane, which is the forward binomial transform
+in the terminology of Wolfram MathWorld, see http://mathworld.wolfram.com/BinomialTransform.html or http://en.wikipedia.org/wiki/Binomial_transform
+
+"euler" Computation of the Euler transform of the given integer sequence, see http://mathworld.wolfram.com/EulerTransform.html
+
+"euler1" transforms are the first step of the third type Euler transform mentioned in http://mathworld.wolfram.com/EulerTransform.html.
+
+"euler2" transforms are the second step of the third type Euler transform mentioned in http://mathworld.wolfram.com/EulerTransform.html.
+
+"invEuler" Computation of the inverse Euler transform of the given integer sequence, see http://mathworld.wolfram.com/EulerTransform.html
+
+"invEuler1" transforms are the first step of the inverse of the third type Euler transform mentioned in 
+http://mathworld.wolfram.com/EulerTransform.html.
+
+"invEuler2" transforms are the second step of the inverse of the third type Euler transform mentioned in 
+http://mathworld.wolfram.com/EulerTransform.html.
+
+"moebius" Sloane's forward Moebius transform. Is sometimes also called the inverse Moebius transform.
+
+"invMoebius" Sloane's inverse Moebius transform. Is sometimes also taken as the forward Moebius transform.
+
+"stirling" Stirling transform, see http://mathworld.wolfram.com/StirlingTransform.html
+
+"invStirling" Inverse Stirling transform, see http://mathworld.wolfram.com/StirlingTransform.html
+
+
+
+4. Partition transforms
+
+"weightedCentralPart"
+"weightedRawPart"
+"unweightedCentralPart"
+"unweightedRawPart"
+"invWeightedCentralPart"
+"invWeightedRawPart"
+"invUnweightedCentralPart"
+"invUnweightedRawPart"
+
+	Partition transforms and their inverses.
+	"weighted" transforms multiply each element with the number of possible realizations of a certain partition, "unweighted" do not.
+	"raw" transforms include all parts of a partition, "central" transforms leave out the 1-part (so their smallest moment is 2).
