@@ -28,7 +28,8 @@ Searching backward in the logs for the A-numbers, you'll find the sequence trans
 and match matrices. If you are lucky, you'll be rewarded with one or more hypotheses on sequence relations
 that have not been documented before.
 
-There is no further documentation or support to ISS, so you should be ready to start exploring the source code.
+There is hardly any documentation (check the /doc folder) and no support to ISS, 
+so you should be ready to start exploring the source code.
 
 
 ## Remarks
