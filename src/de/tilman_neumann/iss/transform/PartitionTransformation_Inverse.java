@@ -194,7 +194,7 @@ public class PartitionTransformation_Inverse extends Transformation {
 				// sign is (-1)^(k-1)
 				summand = summand.negate();
 			}
-			summand = summand.multiply(Factorial.withMemory(partIndex));
+			summand = summand.multiply(Factorial.factorial(partIndex));
 			
 			BigInteger entry = nthRow.get(partIndex);
 			//LOG.debug("entry before: " + entry);
