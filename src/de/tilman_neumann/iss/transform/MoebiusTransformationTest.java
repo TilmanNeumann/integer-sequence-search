@@ -19,8 +19,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import de.tilman_neumann.jml.base.BigIntConstants;
 import de.tilman_neumann.util.ConfigUtil;
+
+import static de.tilman_neumann.jml.base.BigIntConstants.*;
 
 /**
  * Test of the Moebius transform for integer series.
@@ -42,13 +43,13 @@ public class MoebiusTransformationTest {
 	public static void main(String[] args) throws TransformationException {
     	ConfigUtil.initProject();
     	List<BigInteger> series = new ArrayList<BigInteger>();
-//		series.add(BigInt.ZERO);
-		series.add(BigIntConstants.ONE);
-//		series.add(BigInt.TWO);
+//		series.add(I_0);
+		series.add(I_1);
+//		series.add(I_2);
 		for (int i=1; i<10; i++) {
 //			BigInt f = BigInt.factorial(i);
 //			BigInt f = BigInt.ONE;
-			BigInteger f = BigIntConstants.ZERO;
+			BigInteger f = I_0;
 			series.add(f);
 		}
 		MoebiusTransformation moebiusTransform = new MoebiusTransformation();

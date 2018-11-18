@@ -20,9 +20,10 @@ import de.tilman_neumann.iss.sequence.OEISSequence;
 import de.tilman_neumann.iss.sequence.SequenceValues;
 import de.tilman_neumann.iss.sequence.SequenceValues_BigIntListImpl;
 import de.tilman_neumann.iss.sequence.SequenceValues_UnsignedIndexListImpl;
-import de.tilman_neumann.jml.base.BigIntConstants;
 
 import java.math.BigInteger;
+
+import static de.tilman_neumann.jml.base.BigIntConstants.*;
 
 /**
  * Divides all elements of the given sequence by the first value, so that the
@@ -56,9 +57,9 @@ public class NormTransformation extends Transformation {
 		List<BigInteger> b = new ArrayList<BigInteger>(numberOfInputValues);
 		if (numberOfInputValues>0) {
 			BigInteger dividend = a.get(0);
-			if (dividend.equals(BigIntConstants.ZERO)) throw new TransformationException("The input sequence starts with 0 -> The norm transform does not exist (division by zero)");
-			if (dividend.equals(BigIntConstants.ONE)) throw new TransformationException("The input sequence starts with 1 -> The norm transform is equal to the input sequence");
-			b.add(BigIntConstants.ONE); // a_0 / a_0
+			if (dividend.equals(I_0)) throw new TransformationException("The input sequence starts with 0 -> The norm transform does not exist (division by zero)");
+			if (dividend.equals(I_1)) throw new TransformationException("The input sequence starts with 1 -> The norm transform is equal to the input sequence");
+			b.add(I_1); // a_0 / a_0
 			for (int n=1; n<numberOfInputValues; n++) {
 				b.add(computeNthValue(n, a, b, dividend));
 			}
@@ -84,7 +85,7 @@ public class NormTransformation extends Transformation {
 			b.addAll(oldTransform.getValues());
 			dividend = a.get(0);
 		} else if (numberOfInputValues>0) {
-			b.add(BigIntConstants.ONE); // a_0 / a_0
+			b.add(I_1); // a_0 / a_0
 			dividend = a.get(0);
 			oldNumberOfInputValues = 1;
 		}
@@ -111,7 +112,7 @@ public class NormTransformation extends Transformation {
 	 */
 	private BigInteger computeNthValue(int n, List<BigInteger> a, List<BigInteger> b, BigInteger dividend) throws TransformationException {
 		BigInteger a_n = a.get(n);
-		if (a_n.mod(dividend.abs()).equals(BigIntConstants.ZERO)) return a_n.divide(dividend);
+		if (a_n.mod(dividend.abs()).equals(I_0)) return a_n.divide(dividend);
 		throw new TransformationException("The " + n + ".th result value is not integer: " + a_n + "/" + dividend);
 	}
 }

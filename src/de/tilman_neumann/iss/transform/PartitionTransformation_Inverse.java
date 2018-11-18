@@ -25,11 +25,12 @@ import de.tilman_neumann.iss.sequence.OEISSequence;
 import de.tilman_neumann.iss.sequence.SequenceValues;
 import de.tilman_neumann.iss.sequence.SequenceValues_BigIntListImpl;
 import de.tilman_neumann.iss.sequence.SequenceValues_UnsignedIndexListImpl;
-import de.tilman_neumann.jml.base.BigIntConstants;
 import de.tilman_neumann.jml.base.BigIntTriangle;
 import de.tilman_neumann.jml.combinatorics.Factorial;
 import de.tilman_neumann.jml.partitions.IntegerPartition;
 import de.tilman_neumann.jml.partitions.IntegerPartitionGenerator;
+
+import static de.tilman_neumann.jml.base.BigIntConstants.*;
 
 /**
  * Implementation of inverse partition transforms.
@@ -165,7 +166,7 @@ public class PartitionTransformation_Inverse extends Transformation {
 		// create zero-initialized row
 		ArrayList<BigInteger> nthRow = new ArrayList<BigInteger>(n);
 		for (int j=0; j<n; j++) {
-			nthRow.add(BigIntConstants.ZERO);
+			nthRow.add(I_0);
 		}
 		
 		IntegerPartitionGenerator pg = new IntegerPartitionGenerator(n);
