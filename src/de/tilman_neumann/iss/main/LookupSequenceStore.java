@@ -53,11 +53,11 @@ public class LookupSequenceStore extends SequenceStore {
 //		final SequenceMatchCondition duplicateCondition = new SequenceMatchConditionAsymmetric(minNumberOfMatches); // 5:09.9 with dup4
 //		final SequenceMatchCondition duplicateCondition = new SequenceMatchConditionSymmetric(minNumberOfMatches);  // 5:09.7 with dup4
 		final SequenceMatchCondition duplicateCondition = new SequenceMatchCondition1To1(minNumberOfMatches);       // 5:09.2 with dup4
-//		duplicateFinder = new SequenceMatchFinderLinear(duplicateCondition);// 5:10.4 with 1:1cond
-//		duplicateFinder = new SequenceDuplicateFinder(duplicateCondition);  // 5:10.8 with 1:1cond
-//		duplicateFinder = new SequenceDuplicateFinder2(duplicateCondition); // 5:13.7 with 1:1cond
-//		duplicateFinder = new SequenceDuplicateFinder3(duplicateCondition); // 5:11.6 with 1:1cond
-		duplicateFinder = new SequenceDuplicateFinder4(duplicateCondition); // 5:09.2 with 1:1cond
+//		duplicateFinder = new SequenceMatchFinderLinear(duplicateCondition);
+//		duplicateFinder = new SequenceDuplicateFinder(duplicateCondition);
+//		duplicateFinder = new SequenceDuplicateFinder2(duplicateCondition);
+//		duplicateFinder = new SequenceDuplicateFinder3(duplicateCondition); // FIXME program hangs
+		duplicateFinder = new SequenceDuplicateFinder4(duplicateCondition);
 		this.allowSimilarResults = allowSimilarResults;
 	}
 
