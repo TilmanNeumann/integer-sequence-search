@@ -106,25 +106,25 @@ public class ConvolutionTransformation extends Transformation_SimpleImpl {
 			}
 			case STIRLING1_STIRLING2: {
 				BigInteger coeff = Stirling.stirling1(n, k).multiply(Stirling.stirling2(n, n-k));
-				//LOG.debug("double stirling1(" + n + ", " + k + ") = " + coeff);
+				//LOG.debug("stirling1*stirling2(" + n + ", " + k + ") = " + coeff);
 				elem = a.get(k).multiply(a.get(n-k)).multiply(coeff);
 				break;
 			}
 			case ABS_STIRLING1_STIRLING2: {
 				BigInteger coeff = Stirling.absStirling1(n, k).multiply(Stirling.stirling2(n, n-k));
-				//LOG.debug("double stirling1(" + n + ", " + k + ") = " + coeff);
+				//LOG.debug("absStirling1*stirling2(" + n + ", " + k + ") = " + coeff);
 				elem = a.get(k).multiply(a.get(n-k)).multiply(coeff);
 				break;
 			}
 			case STIRLING2_STIRLING1: {
 				BigInteger coeff = Stirling.stirling2(n, k).multiply(Stirling.stirling1(n, n-k));
-				//LOG.debug("double stirling1(" + n + ", " + k + ") = " + coeff);
+				//LOG.debug("stirling2*stirling1(" + n + ", " + k + ") = " + coeff);
 				elem = a.get(k).multiply(a.get(n-k)).multiply(coeff);
 				break;
 			}
 			case STIRLING2_ABS_STIRLING1: {
 				BigInteger coeff = Stirling.stirling2(n, k).multiply(Stirling.absStirling1(n, n-k));
-				//LOG.debug("double stirling1(" + n + ", " + k + ") = " + coeff);
+				//LOG.debug("stirling2*absStirling1(" + n + ", " + k + ") = " + coeff);
 				elem = a.get(k).multiply(a.get(n-k)).multiply(coeff);
 				break;
 			}
