@@ -203,7 +203,7 @@ public class PartitionTransformation extends Transformation {
 					continue; // next partition
 				}
 			}
-			BigInteger summand = weighted ? p.getNumberOfRealizations() : BigInteger.ONE;
+			BigInteger summand = weighted ? p.getNumberOfRealizations() : I_1;
 			//LOG.debug("partition of " + n + ": " + p + ", realizations=" + summand);
 			for (Map.Entry<Integer, Integer> partAndPower : p.entrySet()) {
 				int part = partAndPower.getKey().intValue();
