@@ -41,7 +41,7 @@ public class BinomialTransformation_Inverse extends Transformation_SimpleImpl {
 	BigInteger computeNthValue(int n, List<BigInteger> a, List<BigInteger> b) {
 		BigInteger b_n = BigInteger.ZERO;
 		for (int k=0; k<=n; k++) {
-			BigInteger binomial = Binomial.nk(n, k);
+			BigInteger binomial = Binomial.binomial(n, k);
 			//LOG.debug("binomial(" + n + ", " + k + ") = " + binomial);
 			BigInteger elem = a.get(k).multiply(binomial);
 			if ((n-k)%2!=0) {

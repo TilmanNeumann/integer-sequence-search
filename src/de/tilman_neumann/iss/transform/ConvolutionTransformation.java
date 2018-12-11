@@ -55,7 +55,7 @@ public class ConvolutionTransformation extends Transformation_SimpleImpl {
 				break;
 			}
 			case EXP: {
-				BigInteger coeff = Binomial.nk(n, k);
+				BigInteger coeff = Binomial.binomial(n, k);
 				//LOG.debug("binomial(" + n + ", " + k + ") = " + coeff);
 				elem = a.get(k).multiply(a.get(n-k)).multiply(coeff);
 				break;
