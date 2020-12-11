@@ -128,6 +128,8 @@ public class ConvolutionTransformation extends Transformation_SimpleImpl {
 				elem = a.get(k).multiply(a.get(n-k)).multiply(coeff);
 				break;
 			}
+			default:
+				throw new IllegalArgumentException("Illegal convolution transformation type: " + type);
 			}
 			b_n = b_n.add(elem);
 		}

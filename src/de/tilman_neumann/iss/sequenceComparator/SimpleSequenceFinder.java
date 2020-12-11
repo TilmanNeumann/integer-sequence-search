@@ -13,6 +13,8 @@
  */
 package de.tilman_neumann.iss.sequenceComparator;
 
+import static org.junit.Assert.assertNotNull;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -31,6 +33,7 @@ import de.tilman_neumann.iss.sequenceMatch.SequenceMatchArithmetic;
  */
 public class SimpleSequenceFinder {
 	
+	@SuppressWarnings("unused")
 	private static final Logger LOG = Logger.getLogger(SimpleSequenceFinder.class);
 
 	// the number of fitting numbers required to identify a "simple sequence" 
@@ -60,6 +63,7 @@ public class SimpleSequenceFinder {
 	 * if we investigate a family of sequences; therefore a maximum order threshold
 	 * should not be considered.
 	 * 
+	 * @param lookupSeq
 	 * @throws SequenceMatchArithmetic if arithmetic progression
 	 */
 	public void testForSimpleSequence(OEISSequence lookupSeq) throws SequenceMatchArithmetic {
@@ -133,14 +137,9 @@ public class SimpleSequenceFinder {
 			List<BigInteger> newVals = new ArrayList<BigInteger>(len-1);
 			Iterator<BigInteger> valsIter2 = vals.iterator();
 			BigInteger last = valsIter2.next();
-			int i=1;
 			while (valsIter2.hasNext()) {
 				BigInteger next = valsIter2.next();
-				if (next==null) {
-					LOG.debug("vals = " + vals);
-					LOG.debug("next()=vals[" + i + "] is null!");
-				}
-				i++;
+				assertNotNull(next);
 				newVals.add(next.subtract(last));
 				last = next;
 			}
