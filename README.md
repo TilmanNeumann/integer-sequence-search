@@ -14,7 +14,7 @@ ISS comes with its own set of transforms and is capable to discover sequence rel
 
 * Clone the repository, create a plain Java project importing it, make sure that 'src' is the source folder of your project, and add the jars from the lib-folder to your classpath. 
 
-* You will need Java 8 or higher for the project to compile.
+* You will need <strong>Java 9</strong> or higher for the project to compile.
 
 * Download some OEIS data file (stripped.zip) from http://oeis.org/pages.html; unpack it and name the unpacked version stripped.txt.
 Put that file into the main folder of your new Java project. Also, please take note of the OEIS license, see http://oeis.org/LICENSE.
