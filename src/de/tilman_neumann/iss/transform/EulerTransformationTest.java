@@ -16,11 +16,13 @@ package de.tilman_neumann.iss.transform;
 import static org.junit.Assert.assertEquals;
 
 import org.apache.log4j.Logger;
+import org.junit.Before;
 import org.junit.Test;
 
 import de.tilman_neumann.iss.sequence.OEISSequence;
 import de.tilman_neumann.iss.sequence.SequenceValues_BigIntListImpl;
 import de.tilman_neumann.jml.base.BigIntList;
+import de.tilman_neumann.util.ConfigUtil;
 
 /**
  * Test of Sloane's Euler transform and its inverse.
@@ -30,7 +32,12 @@ import de.tilman_neumann.jml.base.BigIntList;
  */
 public class EulerTransformationTest {
 	private static final Logger LOG = Logger.getLogger(EulerTransformationTest.class);
-	
+
+	@Before
+	public void setup() {
+		ConfigUtil.initProject();
+	}
+
 	@Test
 	public void testA000292() throws TransformationException {
 		BigIntList a000292 = BigIntList.valueOf(/*0, */"1, 4, 10, 20, 35, 56, 84, 120, 165, 220, 286, 364, 455, 560, 680, 816, 969, 1140, 1330, 1540, 1771, 2024, 2300, 2600, 2925, 3276"/*, 3654, 4060, 4495, 4960, 5456, 5984, 6545, 7140, 7770, 8436, 9139, 9880, 10660, 11480, 12341*/);
