@@ -20,6 +20,7 @@ import java.util.StringTokenizer;
 import org.apache.log4j.Logger;
 import java.math.BigInteger;
 
+import de.tilman_neumann.jml.base.BigIntTriangle;
 import de.tilman_neumann.util.ConfigUtil;
 
 public class TransformationTest {
@@ -61,22 +62,34 @@ public class TransformationTest {
     	List<BigInteger> euler_inverse = new EulerTransformation_Inverse().compute(x);
     	LOG.info("euler_inverse(x) = \n" + euler_inverse);
     	
-    	List<BigInteger> euler2 = new PartitionTransformation(false, false).computeTriangle(x).getRowSums();
+    	BigIntTriangle euler2Triangle = new PartitionTransformation(false, false).computeTriangle(x);
+    	LOG.info("euler2Triangle(x) = \n" + euler2Triangle);
+    	List<BigInteger> euler2 = euler2Triangle.getRowSums();
     	LOG.info("euler2(x) = \n" + euler2);
     	
-    	List<BigInteger> euler2_inverse = new PartitionTransformation_Inverse(false, false).computeTriangle(x).getRowSums();
+    	BigIntTriangle euler2InverseTriangle = new PartitionTransformation_Inverse(false, false).computeTriangle(x);
+    	LOG.info("euler2InverseTriangle(x) = \n" + euler2InverseTriangle);
+    	List<BigInteger> euler2_inverse = euler2InverseTriangle.getRowSums();
     	LOG.info("euler2_inverse(x) = \n" + euler2_inverse);
 
-    	List<BigInteger> exponential = new PartitionTransformation(true, false).computeTriangle(x).getRowSums();
+    	BigIntTriangle exponentialTriangle = new PartitionTransformation(true, false).computeTriangle(x);
+    	LOG.info("exponentialTriangle(x) = \n" + exponentialTriangle);
+    	List<BigInteger> exponential = exponentialTriangle.getRowSums();
     	LOG.info("exponential(x) = \n" + exponential);
 
-    	List<BigInteger> logarithmic = new PartitionTransformation_Inverse(true, false).computeTriangle(x).getRowSums();
+    	BigIntTriangle logarithmicTriangle = new PartitionTransformation_Inverse(true, false).computeTriangle(x);
+    	LOG.info("logarithmicTriangle(x) = \n" + logarithmicTriangle);
+    	List<BigInteger> logarithmic = logarithmicTriangle.getRowSums();
     	LOG.info("logarithmic(x) = \n" + logarithmic);
 
-    	List<BigInteger> centralExponential = new PartitionTransformation(true, true).computeTriangle(x).getRowSums();
+    	BigIntTriangle centralExponentialTriangle = new PartitionTransformation(true, true).computeTriangle(x);
+    	LOG.info("centralExponentialTriangle(x) = \n" + centralExponentialTriangle);
+    	List<BigInteger> centralExponential = centralExponentialTriangle.getRowSums();
     	LOG.info("centralExponential(x) = \n" + centralExponential);
 
-    	List<BigInteger> centralExponential_inverse = new PartitionTransformation_Inverse(true, true).computeTriangle(x).getRowSums();
+    	BigIntTriangle centralExponentialInverseTriangle = new PartitionTransformation_Inverse(true, true).computeTriangle(x);
+    	LOG.info("centralExponentialInverseTriangle(x) = \n" + centralExponentialInverseTriangle);
+    	List<BigInteger> centralExponential_inverse = centralExponentialInverseTriangle.getRowSums();
     	LOG.info("centralExponential_inverse(x) = \n" + centralExponential_inverse);
 
     	List<BigInteger> binomial = new BinomialTransformation().compute(x);
