@@ -1,6 +1,6 @@
 /*
  * integer-sequence-search (ISS) is an offline OEIS sequence search engine.
- * Copyright (C) 2018 Tilman Neumann - tilman.neumann@web.de
+ * Copyright (C) 2018-2024 Tilman Neumann - tilman.neumann@web.de
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
@@ -18,7 +18,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import java.math.BigInteger;
 
 import de.tilman_neumann.iss.sequence.OEISSequence;
@@ -76,7 +77,7 @@ import static de.tilman_neumann.jml.base.BigIntConstants.*;
  */
 public class PartitionTransformation extends Transformation {
 	
-	private static final Logger LOG = Logger.getLogger(PartitionTransformation.class);
+	private static final Logger LOG = LogManager.getLogger(PartitionTransformation.class);
 
 	private boolean weighted;
 	private boolean central;

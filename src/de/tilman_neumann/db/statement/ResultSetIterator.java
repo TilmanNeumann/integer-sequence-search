@@ -1,6 +1,6 @@
 /*
  * integer-sequence-search (ISS) is an offline OEIS sequence search engine.
- * Copyright (C) 2018 Tilman Neumann - tilman.neumann@web.de
+ * Copyright (C) 2018-2024 Tilman Neumann - tilman.neumann@web.de
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
@@ -20,7 +20,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import de.tilman_neumann.db.meta.ColumnMeta;
 
@@ -30,7 +31,7 @@ import de.tilman_neumann.db.meta.ColumnMeta;
  * @author Tilman Neumann
  */
 public class ResultSetIterator implements Iterator<Object[]> {
-	private static final Logger LOG = Logger.getLogger(ResultSetIterator.class);
+	private static final Logger LOG = LogManager.getLogger(ResultSetIterator.class);
 
 	private static Map<Integer, String> CODES2DESCRIPTIONS;
 	

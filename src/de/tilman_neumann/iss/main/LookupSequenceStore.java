@@ -1,6 +1,6 @@
 /*
  * integer-sequence-search (ISS) is an offline OEIS sequence search engine.
- * Copyright (C) 2018 Tilman Neumann - tilman.neumann@web.de
+ * Copyright (C) 2018-2024 Tilman Neumann - tilman.neumann@web.de
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
@@ -15,7 +15,8 @@ package de.tilman_neumann.iss.main;
 
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import de.tilman_neumann.iss.sequence.OEISSequence;
 import de.tilman_neumann.iss.sequenceComparator.SequenceDuplicateFinder4;
@@ -33,7 +34,7 @@ public class LookupSequenceStore extends SequenceStore {
 
 	private static final long serialVersionUID = -9201914563761527886L;
 	
-	private static final Logger LOG = Logger.getLogger(LookupSequenceStore.class);
+	private static final Logger LOG = LogManager.getLogger(LookupSequenceStore.class);
 	
 	private final SequenceMatchFinderBaseImpl duplicateFinder;
 	private boolean allowSimilarResults;

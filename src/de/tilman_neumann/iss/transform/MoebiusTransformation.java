@@ -1,6 +1,6 @@
 /*
  * integer-sequence-search (ISS) is an offline OEIS sequence search engine.
- * Copyright (C) 2018 Tilman Neumann - tilman.neumann@web.de
+ * Copyright (C) 2018-2024 Tilman Neumann - tilman.neumann@web.de
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
@@ -17,7 +17,8 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.SortedSet;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import de.tilman_neumann.jml.Divisors;
 import de.tilman_neumann.jml.MoebiusFunction;
@@ -30,7 +31,7 @@ import de.tilman_neumann.jml.MoebiusFunction;
  */
 public class MoebiusTransformation extends Transformation_SimpleImpl {
 	@SuppressWarnings("unused")
-	private static final Logger LOG = Logger.getLogger(MoebiusTransformation.class);
+	private static final Logger LOG = LogManager.getLogger(MoebiusTransformation.class);
 
 	public String getName() {
 		return "moebius";

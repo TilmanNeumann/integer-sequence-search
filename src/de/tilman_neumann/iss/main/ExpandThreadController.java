@@ -1,6 +1,6 @@
 /*
  * integer-sequence-search (ISS) is an offline OEIS sequence search engine.
- * Copyright (C) 2018 Tilman Neumann - tilman.neumann@web.de
+ * Copyright (C) 2018-2024 Tilman Neumann - tilman.neumann@web.de
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
@@ -15,7 +15,8 @@ package de.tilman_neumann.iss.main;
 
 import java.util.LinkedList;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import de.tilman_neumann.iss.sequence.OEISSequence;
 import de.tilman_neumann.util.ConfigUtil;
@@ -31,7 +32,7 @@ import de.tilman_neumann.util.ConfigUtil;
 public class ExpandThreadController extends ThreadGroup {
 	
 	@SuppressWarnings("unused")
-	private static final Logger LOG = Logger.getLogger(ExpandThreadController.class);
+	private static final Logger LOG = LogManager.getLogger(ExpandThreadController.class);
 
 	private final int maxThreads;
 

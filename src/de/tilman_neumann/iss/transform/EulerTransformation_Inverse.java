@@ -13,12 +13,13 @@
  */
 package de.tilman_neumann.iss.transform;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.SortedSet;
 
-import org.apache.log4j.Logger;
-import java.math.BigInteger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import de.tilman_neumann.iss.sequence.OEISSequence;
 import de.tilman_neumann.iss.sequence.SequenceValues;
@@ -35,7 +36,7 @@ import de.tilman_neumann.jml.MoebiusFunction;
  */
 public class EulerTransformation_Inverse extends Transformation {
 	@SuppressWarnings("unused")
-	private static final Logger LOG = Logger.getLogger(EulerTransformation_Inverse.class);
+	private static final Logger LOG = LogManager.getLogger(EulerTransformation_Inverse.class);
 
 	private final Transformation step1Transformation = new EulerTransformation_Inverse_Step1();
 

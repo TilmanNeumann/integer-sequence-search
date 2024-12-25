@@ -1,6 +1,6 @@
 /*
  * integer-sequence-search (ISS) is an offline OEIS sequence search engine.
- * Copyright (C) 2018 Tilman Neumann - tilman.neumann@web.de
+ * Copyright (C) 2018-2024 Tilman Neumann - tilman.neumann@web.de
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
@@ -19,7 +19,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import de.tilman_neumann.db.sql.SqlColumn;
 import de.tilman_neumann.db.sql.SqlStringWithParams;
@@ -33,7 +34,7 @@ import de.tilman_neumann.db.statement.ResultSetIterator;
 // critical members like Db.connection less than public.
 public class StatementBaseImpl {
 	
-	private static final Logger LOG = Logger.getLogger(StatementBaseImpl.class);
+	private static final Logger LOG = LogManager.getLogger(StatementBaseImpl.class);
 	
 	private Db db = null;
 	protected PreparedStatement preparedStatement = null;

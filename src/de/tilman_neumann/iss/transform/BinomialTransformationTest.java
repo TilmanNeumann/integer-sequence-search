@@ -1,6 +1,6 @@
 /*
  * integer-sequence-search (ISS) is an offline OEIS sequence search engine.
- * Copyright (C) 2018 Tilman Neumann - tilman.neumann@web.de
+ * Copyright (C) 2018-2024 Tilman Neumann - tilman.neumann@web.de
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
@@ -16,7 +16,8 @@ package de.tilman_neumann.iss.transform;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import java.math.BigInteger;
 
 import de.tilman_neumann.util.ConfigUtil;
@@ -30,7 +31,7 @@ import de.tilman_neumann.util.ConfigUtil;
  */
 // 1 1 2 5 14 42 132 429 1430 4862 16796 58786 208012
 public class BinomialTransformationTest {
-	private static final Logger LOG = Logger.getLogger(BinomialTransformationTest.class);
+	private static final Logger LOG = LogManager.getLogger(BinomialTransformationTest.class);
 
 	private BinomialTransformationTest() {
 		// static class
